@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер валют</title>
+</head>
+<body>
+    <h1>Конвертер валют</h1>
+    <form action="/convert" method="post">
+        <label for="from_currency">Из валюты:</label>
+        <select name="from_currency" id="from_currency">
+            <option value="usd">Доллар США (USD)</option>
+            <option value="eur">Евро (EUR)</option>
+            <option value="jpy">Японская иена (JPY)</option>
+            <option value="rub">Российский рубль (RUB)</option>
+        </select>
+        <label for="to_currency">В валюту:</label>
+        <select name="to_currency" id="to_currency">
+            <option value="usd">Доллар США (USD)</option>
+            <option value="eur">Евро (EUR)</option>
+            <option value="jpy">Японская иена (JPY)</option>
+            <option value="rub">Российский рубль (RUB)</option>
+        </select>
+        <label for="amount">Сумма:</label>
+        <input type="number" name="amount" id="amount" step="any" required>
+        <button type="submit">Конвертировать</button>
+    </form>
+        <p>Конвертированная сумма: {{ converted_amount }}</p>
+</body>
+</html>
+
